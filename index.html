@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiss Army Knife Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <header>
+      <h1>Swiss Army Knife Tools</h1>
+      <nav>
+        <button onclick="showTool('calculator')">Calculator</button>
+        <button onclick="showTool('unitConverter')">Unit Converter</button>
+        <button onclick="showTool('notepad')">Notepad</button>
+      </nav>
+    </header>
+
+    <!-- Tool Containers -->
+    <main>
+      <!-- Calculator Tool -->
+      <section id="calculator" class="tool">
+        <h2>Calculator</h2>
+        <input type="number" id="calc-input1" placeholder="Enter a number" />
+        <input
+          type="number"
+          id="calc-input2"
+          placeholder="Enter another number"
+        />
+        <select id="calc-operator">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <button onclick="calculate()">Calculate</button>
+        <p id="calc-result">Result:</p>
+      </section>
+
+      <!-- Unit Converter Tool -->
+      <section id="unitConverter" class="tool">
+        <h2>Unit Converter (km to miles)</h2>
+        <input type="number" id="kmInput" placeholder="Enter kilometers" />
+        <button onclick="convertToMiles()">Convert to Miles</button>
+        <p id="mileResult">Miles:</p>
+      </section>
+
+      <!-- Notepad Tool -->
+      <section id="notepad" class="tool">
+        <h2>Notepad</h2>
+        <textarea
+          id="notepadInput"
+          placeholder="Write your notes here..."
+        ></textarea>
+        <button onclick="saveNote()">Save Note</button>
+        <p>Saved Note:</p>
+        <p id="savedNote"></p>
+      </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
